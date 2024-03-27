@@ -1,14 +1,20 @@
-[
-    {
-        "plans": ["standard", "pro", "custom"],
-        "Products": {
-            "paddle": ["standard", "pro", "custom"],
-            "chargebee": {
-               "variants": ["standard", "pro", "custom"],
-               "methods":["Via-link","via-API"],
-               "charges":[49,99,199]
-            }
-        }
+{
+    "chargebeeMethods":["link","api"],
+    "paddleMethods":[],
+    "products":[
+        {
+            "name":"Nps Free",
+            "chargeBeeProdId":"",
+            "paddleProdId":""
+        },
+        {
+            "name":"Nps Scale",
+            "chargeBeeProdId":""
 
-    }
-]
+        }    ,    {
+            "name":"Nps Pro",
+            "chargeBeeProdId":""
+
+        }
+    ]
+}
