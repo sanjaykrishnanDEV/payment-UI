@@ -26,7 +26,7 @@ const ChargeBee = () => {
         );
         break;
       case "api":
-        setShow(false);
+        setShow(true);
         break;
 
       default:

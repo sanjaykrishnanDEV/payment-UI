@@ -1,7 +1,8 @@
 const BillingDetails = () => {
   return (
-    <form>
-      <div className="md:grid-cols- mb-6 grid gap-6">
+    <form className="mt-10 w-1/2 border-2 p-10">
+      <div className="md:grid-cols mb-6 grid gap-6">
+        <p>Billing details</p>
         <div>
           <label
             for="first_name"
