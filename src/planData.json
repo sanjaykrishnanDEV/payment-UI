@@ -1,19 +1,19 @@
 {
-    "chargebeeMethods":["link","api"],
-    "paddleMethods":[],
-    "products":[
-        {
-            "name":"Nps Free",
-            "chargeBeeProdId":"nps_free-USD-monthly",
-            "paddleProdId":""
-        },
-        {
-            "name":"Nps Scale",
-            "chargeBeeProdId":"nps_scale-USD-yearly"
-
-        }    ,    {
-            "name":"Nps Pro",
-            "chargeBeeProdId":"nps_pro-USD-monthly"
-        }
-    ]
+  "chargebeeMethods": ["link", "api"],
+  "paddleMethods": ["overlay", "inline"],
+  "products": [
+    {
+      "name": "Nps Free",
+      "chargeBeeProdId": "nps_free-USD-monthly",
+      "paddleProdId": ""
+    },
+    {
+      "name": "Nps Scale",
+      "chargeBeeProdId": "nps_scale-USD-yearly"
+    },
+    {
+      "name": "Nps Pro",
+      "chargeBeeProdId": "nps_pro-USD-monthly"
+    }
+  ]
 }
