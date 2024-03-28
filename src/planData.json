@@ -4,16 +4,16 @@
     "products":[
         {
             "name":"Nps Free",
-            "chargeBeeProdId":"nps_free-USD-monthly",
+            "chargeBeeProdId":"nps_free-USD-Monthly",
             "paddleProdId":""
         },
         {
             "name":"Nps Scale",
-            "chargeBeeProdId":"nps_scale-USD-yearly"
+            "chargeBeeProdId":"nps_scale-USD-Yearly"
 
         }    ,    {
             "name":"Nps Pro",
-            "chargeBeeProdId":"nps_pro-USD-monthly"
+            "chargeBeeProdId":"nps_pro-USD-Monthly"
         }
     ]
 }

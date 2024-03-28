@@ -1,12 +1,12 @@
 import Billing from "./Billing";
 
-const BillingContainer = ({ products, currentMethod, handleSubmit }) => {
+const BillingContainer = ({ products, currentMethod, handleChoosePlan }) => {
   return (
     <div className="flex items-center justify-around">
       <Billing
         products={products}
         currentMethod={currentMethod}
-        handleSubmit={handleSubmit}
+        handleChoosePlan={handleChoosePlan}
       />
     </div>
   );

@@ -1,11 +1,11 @@
-const BillingDetails = () => {
+const BillingDetails = ({ handleSubmit }) => {
   return (
-    <form className="mt-10 w-1/2 border-2 p-10">
+    <form className="mt-10 w-1/2 border-2 p-10" onSubmit={handleSubmit}>
       <div className="md:grid-cols mb-6 grid gap-6">
         <p>Billing details</p>
         <div>
           <label
-            for="first_name"
+            html_for="first_name"
             className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
           >
             First name
@@ -13,6 +13,7 @@ const BillingDetails = () => {
           <input
             type="text"
             id="first_name"
+            name="first_name"
             className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
             placeholder="First name"
             required
@@ -20,7 +21,7 @@ const BillingDetails = () => {
         </div>
         <div>
           <label
-            for="last_name"
+            html_for="last_name"
             className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
           >
             Last name
@@ -28,6 +29,7 @@ const BillingDetails = () => {
           <input
             type="text"
             id="last_name"
+            name="last_name"
             className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
             placeholder="Last name"
             required
@@ -35,7 +37,7 @@ const BillingDetails = () => {
         </div>
         <div>
           <label
-            for="email"
+            html_for="email"
             className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
           >
             Email name
@@ -43,84 +45,59 @@ const BillingDetails = () => {
           <input
             type="text"
             id="email"
+            name="email"
             className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
             placeholder="Email"
             required
           />
         </div>
 
+        <p>Card details</p>
         <div>
           <label
-            for="locale"
+            html_for="number"
             className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
           >
-            Locale
+            number
           </label>
           <input
             type="text"
-            id="locale"
+            id="number"
+            name="number"
             className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
-            placeholder="locale"
-            required
-          />
-        </div>
-        <div>
-          <label
-            for="address"
-            className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
-          >
-            address
-          </label>
-          <input
-            type="text"
-            id="address"
-            className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
-            placeholder="Address"
-            required
-          />
-        </div>
-        <div>
-          <label
-            for="city"
-            className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
-          >
-            city
-          </label>
-          <input
-            type="text"
-            id="city"
-            className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
-            placeholder="City"
+            placeholder="Zip"
             required
           />
         </div>
 
         <div>
           <label
-            for="state"
+            html_for="expiry_date"
             className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
           >
-            state
+            Expiry date
           </label>
           <input
             type="text"
-            id="state"
+            id="expiry_date"
+            name="expiry_date"
             className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
-            placeholder="State"
+            placeholder="Zip"
             required
           />
         </div>
 
         <div>
           <label
-            for="zip"
+            html_for="cvv"
             className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
           >
-            zip
+            cvv
           </label>
           <input
             type="text"
-            id="zip"
+            id="cvv"
+            name="cvv"
             className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
             placeholder="Zip"
             required
@@ -128,8 +105,8 @@ const BillingDetails = () => {
         </div>
       </div>
       <button
-        type="button"
-        class="rounded-lg bg-blue-700 px-3 py-2 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        type="submit"
+        className="rounded-lg bg-blue-700 px-3 py-2 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
       >
         Checkout
       </button>
