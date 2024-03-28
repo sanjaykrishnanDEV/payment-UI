@@ -6,11 +6,7 @@ import PaddlePoc from "./pages/paddle.jsx";
 function App() {
   const router = createBrowserRouter([
     {
-      path: "/charge-bee",
-      element: <ChargeBee />,
-    },
-    {
-      path: "/paddle",
+      path: "/",
       element: <PaddlePoc />,
     },
   ]);
