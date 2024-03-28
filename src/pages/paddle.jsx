@@ -1,10 +1,10 @@
 import Billing from "../components/Billing";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import BillingContainer from "../components/BillingContainer";
 import TabList from "../components/Tabs";
 import planData from "../planData.json";
 import BillingDetails from "../components/BillingDetails";
-import { Paddle, initializePaddle } from "@paddle/paddle-js";
+import { initializePaddle } from "@paddle/paddle-js";
 
 const PaddlePoc = () => {
   const { paddleMethods, products } = planData;
@@ -14,16 +14,17 @@ const PaddlePoc = () => {
     setCurrentMethod(paddleMethods[index]);
   };
 
+  const checkoutContainer = useRef(null);
   useEffect(() => {
     console.log("cur", currentMethod);
   }, [currentMethod]);
-  const [paddle, setPaddle] = useState<Paddle>();
+  const [paddle, setPaddle] = useState();
   ``;
   useEffect(() => {
     initializePaddle({
       token: "test_326875c3daef1b9bbb1c39e0198",
       environment: "sandbox",
-    }).then((paddleInstance: Paddle | undefined) => {
+    }).then((paddleInstance) => {
       paddle?.Environment.set("sandbox");
       if (paddleInstance) {
         setPaddle(paddleInstance);
@@ -98,7 +99,16 @@ const PaddlePoc = () => {
         currentMethod={currentMethod}
       />
       {show && <BillingDetails />}
-      <div className="checkout-container"></div>
+      {currentMethod === "inline" && (
+        <div className="rounded-3 container my-[100px] flex bg-slate-200">
+          <div className="product flex-2 mx-[200px]  ">
+            <h1 className=" my-10 h-[50px] w-[200px] bg-[yellow]">NPS Scale</h1>
+            <h3 className="my-4">Billed Monthly</h3>
+            <h4 className="my-4">Total: $49</h4>
+          </div>
+          <div className="checkout-container"></div>
+        </div>
+      )}
     </div>
   );
 };
